@@ -51,7 +51,6 @@ class PessoaController {
       res.status(500).json(erro.message)
     }
   }
-  const 
 }
 
 module.exports = PessoaController
