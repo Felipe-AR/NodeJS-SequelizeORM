@@ -46,7 +46,7 @@ class PessoaController {
     const { id } = req.params
     try {
       await database.Pessoas.destroy({ where: { id: Number(id) } })
-      return res.status(200).json({mensagem: `O id ${id} foi deletado`})
+      return res.status(200).json({ mensagem: `O id ${id} foi deletado` })
     } catch (erro) {
       res.status(500).json(erro.message)
     }
