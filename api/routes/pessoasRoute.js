@@ -7,6 +7,7 @@ router.get('/pessoas', PessoaController.pegaPessoasAtivas)
 router.get('/pessoas/todos', PessoaController.pegaTodasAsPessoas)
 router.get('/pessoas/:id', PessoaController.pegaUmaPessoa)
 router.post('/pessoas', PessoaController.criaPessoa)
+router.post('/pessoas/:estudanteId/cancela', PessoaController.cancelaPessoa)
 router.put('/pessoas/:id', PessoaController.atualizaPessoa)
 router.delete('/pessoas/:id', PessoaController.apagaPessoa)
 
@@ -18,5 +19,6 @@ router.put('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.atua
 router.delete('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.apagaMatricula)
 
 router.get('/pessoas/matricula/:turmaId/confirmados', PessoaController.pegaMatriculasPorTurma)
+router.get('/pessoas/matricula/lotada', PessoaController.pegaTurmasLotadas)
 
 module.exports = router
